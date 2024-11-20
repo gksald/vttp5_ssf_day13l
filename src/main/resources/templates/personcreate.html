@@ -110,7 +110,20 @@
                 <label for="exampleFormControlInput1" class="form-label">DOB</label>
                 <input type="date" class="form-control" name="dob" th:field="*{dob}" placeholder="Birth date">
             </div>
-            <div class="alert alert-danger" th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}"></div>
+            <div class="alert alert-danger" th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Telephone</label>
+                <input type="text" class="form-control" name="telephone" th:field="*{telephone}" placeholder="Telephone">
+            </div>
+            <div class="alert alert-danger" th:if="${#fields.hasErrors('telephone')}" th:errors="*{telephone}">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Postal Code</label>
+                <input type="number" class="form-control" name="postalCode" th:field="*{postalCode}" placeholder="Postal Code">
+            </div>
+            <div class="alert alert-danger" th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}">
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

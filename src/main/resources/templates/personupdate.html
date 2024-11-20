@@ -112,9 +112,9 @@
             <div class="alert alert-danger" th:if="${#fields.hasErrors('telephone')}" th:errors="*{telephone}"></div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Postal Code</label>
-                <input type="number" class="form-control" name="postalcode" th:field="*{postalcode}" placeholder="Postal Code">
+                <input type="number" class="form-control" name="postalCode" th:field="*{postalCode}" placeholder="Postal Code">
             </div>
-            <div class="alert alert-danger" th:if="${#fields.hasErrors('postalcode')}" th:errors="*{postalcode}"></div>
+            <div class="alert alert-danger" th:if="${#fields.hasErrors('postalCode')}" th:errors="*{postalCode}"></div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

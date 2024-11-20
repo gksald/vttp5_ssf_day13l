@@ -58,11 +58,11 @@ public class PersonController {
     @GetMapping("/update/{person-id}")
     public String updatePerson(@PathVariable("person-id") String personId, Model model) {
         Person p = personService.findById(personId);
-        model.addAttribute("personId", p);
+        model.addAttribute("person", p);
                 return "personupdate";
     }
 
-    @PostMapping(path = "/create")
+    @PostMapping("/update")
     public String postUpdatedForm(@Valid @ModelAttribute("person") Person person, BindingResult result, Model model) {
         if(result.hasErrors())
             return "personupdate";
@@ -71,10 +71,5 @@ public class PersonController {
         
         return "redirect:/persons";
     }
-
-
-    
-
-    
 
 }
